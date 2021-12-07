@@ -10,7 +10,7 @@ const WagePerHr=20;
 let Emp_TodayWorkingHR=0;
 let DailyWage=0;
 let monthlywage=0;
-
+let TotalHrs=0;
 
 
 
@@ -18,14 +18,14 @@ function Employe_DailyWage(Emp_AttenDance){
 
     switch (Emp_AttenDance) {
         case Emp_PartTime:
-            Emp_TodayWorkingHR+=PartTime_Hours;
+            Emp_TodayWorkingHR=PartTime_Hours;
     
             break;
         case Emp_FullTime:
-                Emp_TodayWorkingHR+=FullTime_hours;
+                Emp_TodayWorkingHR=FullTime_hours;
             break;
        case Emp_Absent:
-                    Emp_TodayWorkingHR+=Absent_hours;
+                    Emp_TodayWorkingHR=Absent_hours;
             break;
         default:
             console.log("there is an Error");
@@ -34,13 +34,16 @@ function Employe_DailyWage(Emp_AttenDance){
     return Emp_TodayWorkingHR;
 
 }
+let Monthdays=0
+while(Monthdays<20 && TotalHrs<160 ){
+    Emp_AttenDance=Math.floor(Math.random()*3);
+    Emp_TodayWorkingHR=Employe_DailyWage(Emp_AttenDance);
+monthlywage+=Emp_TodayWorkingHR;
+TotalHrs+=Emp_TodayWorkingHR;
 
-for (let MonthDays = 0; MonthDays < 20; MonthDays++) {
-    let Emp_AttenDance=Math.floor(Math.random()*3);  
-     Emp_TodayWorkingHR=Employe_DailyWage(Emp_AttenDance);
-    monthlywage+=Emp_TodayWorkingHR;
-    
+Monthdays++;
 }
+
 
 
 DailyWage=monthlywage*WagePerHr;
