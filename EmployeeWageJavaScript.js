@@ -77,7 +77,7 @@ console.log(MapDayWithWage);
 
 console.log("daily full time wage");
 function FullDayWage(daily){
-return daily>=160;
+return daily.includes("160");
 }
-let FilterArrya=DailyWAgesArray.filter(FullDayWage);
+let FilterArrya=MapDayWithWage.filter(FullDayWage);
 console.log(FilterArrya);
