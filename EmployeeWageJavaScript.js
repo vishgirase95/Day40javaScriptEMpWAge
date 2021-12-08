@@ -122,3 +122,6 @@ return count1 +" : "+value2+" : "+wageTillNow;
 }
 let DetailTabel=DailyWAgesArray.map(DetailMap);
 console.log(DetailTabel);
+
+
+
