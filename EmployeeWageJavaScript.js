@@ -81,3 +81,10 @@ return daily.includes("160");
 }
 let FilterArrya=MapDayWithWage.filter(FullDayWage);
 console.log(FilterArrya);
+
+console.log("\n First time full day wage earned");
+function FindFullDaywage(value){
+return value>="160";
+}
+let FirstFullDayEarned=MapDayWithWage.find(FindFullDaywage);
+console.log(FirstFullDayEarned);
