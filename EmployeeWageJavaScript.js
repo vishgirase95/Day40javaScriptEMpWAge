@@ -84,15 +84,22 @@ console.log(FilterArrya);
 
 console.log("\n First time full day wage earned");
 function FindFullDaywage(value){
-return value>="160";
+return value.includes("160");
 }
 let FirstFullDayEarned=MapDayWithWage.find(FindFullDaywage);
 console.log(FirstFullDayEarned);
 
 console.log("\n check if every day is fulltime");
 function checkEveryDAywage(value){
-return value="160";
+return value.includes("160");
 }
 
 let Answer=FilterArrya.every(checkEveryDAywage);
 console.log("\n Every wage is full time in Filter Arrya : "+ Answer);
+
+
+function checkIfSomePartTime(valuee){
+return valuee==80;
+}
+let AnswerSome=DailyWAgesArray.some(checkIfSomePartTime);
+console.log("\n Check if there is any part time wage : "+ AnswerSome);
