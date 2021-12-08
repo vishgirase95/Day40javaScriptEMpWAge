@@ -57,8 +57,18 @@ let sum=DailyWAgesArray.reduce((accumulator,currentvalue)=>{
 },0);
 console.log("\n\nTotal wage using reduce  "+sum);
 let total=0;
-DailyWAgesArray.forEach(function(value){
-      total+=value;
-    
-});
-console.log("\n\nTotal wage using for each : "+total);
+function foreachadd(value){
+return total+=value;
+}
+DailyWAgesArray.forEach(foreachadd);
+console.log("\n\nTotal wage using forEach : "+total);
+
+let dailyconnt=0;
+function mapDayWithWage(dailywage){
+    dailyconnt++;
+    return dailyconnt+" = " +dailywage;
+}
+let MapDayWithWage=DailyWAgesArray.map(mapDayWithWage)
+console.log("wage using map");
+
+console.log(MapDayWithWage);
