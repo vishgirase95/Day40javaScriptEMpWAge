@@ -103,3 +103,12 @@ return valuee==80;
 }
 let AnswerSome=DailyWAgesArray.some(checkIfSomePartTime);
 console.log("\n Check if there is any part time wage : "+ AnswerSome);
+ 
+
+let presentEmp=DailyWAgesArray.reduce((count,currentvalue)=>{
+    if (currentvalue>0){
+        count++;
+    }
+    return count;
+},0);
+console.log("\n\nTotal present  :"+presentEmp);
