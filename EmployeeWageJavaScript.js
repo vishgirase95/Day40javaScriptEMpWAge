@@ -52,3 +52,13 @@ Monthdays++;
 let TotalEmpWage=calcDailyWage(TotalHrs);
 console.log(DailyWAgesArray);
 console.log("Total Days : "+TotalWorkDays  +"\nTotal Hrs : "+TotalHrs+"\nEmpWage : "+ TotalEmpWage);
+let sum=DailyWAgesArray.reduce((accumulator,currentvalue)=>{
+    return accumulator+currentvalue;
+},0);
+console.log("\n\nTotal wage using reduce  "+sum);
+let total=0;
+DailyWAgesArray.forEach(function(value){
+      total+=value;
+    
+});
+console.log("\n\nTotal wage using for each : "+total);
