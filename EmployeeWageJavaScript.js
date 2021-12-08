@@ -88,3 +88,11 @@ return value>="160";
 }
 let FirstFullDayEarned=MapDayWithWage.find(FindFullDaywage);
 console.log(FirstFullDayEarned);
+
+console.log("\n check if every day is fulltime");
+function checkEveryDAywage(value){
+return value="160";
+}
+
+let Answer=FilterArrya.every(checkEveryDAywage);
+console.log("\n Every wage is full time in Filter Arrya : "+ Answer);
