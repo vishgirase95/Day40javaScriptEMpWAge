@@ -112,3 +112,13 @@ let presentEmp=DailyWAgesArray.reduce((count,currentvalue)=>{
     return count;
 },0);
 console.log("\n\nTotal present  :"+presentEmp);
+
+ let count1=0;
+ let wageTillNow=0;
+function DetailMap(value2){
+    wageTillNow+=value2;
+    count1++;
+return count1 +" : "+value2+" : "+wageTillNow;
+}
+let DetailTabel=DailyWAgesArray.map(DetailMap);
+console.log(DetailTabel);
