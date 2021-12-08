@@ -52,6 +52,7 @@ Monthdays++;
 let TotalEmpWage=calcDailyWage(TotalHrs);
 console.log(DailyWAgesArray);
 console.log("Total Days : "+TotalWorkDays  +"\nTotal Hrs : "+TotalHrs+"\nEmpWage : "+ TotalEmpWage);
+
 let sum=DailyWAgesArray.reduce((accumulator,currentvalue)=>{
     return accumulator+currentvalue;
 },0);
@@ -71,4 +72,12 @@ function mapDayWithWage(dailywage){
 let MapDayWithWage=DailyWAgesArray.map(mapDayWithWage)
 console.log("wage using map");
 
+
 console.log(MapDayWithWage);
+
+console.log("daily full time wage");
+function FullDayWage(daily){
+return daily>=160;
+}
+let FilterArrya=DailyWAgesArray.filter(FullDayWage);
+console.log(FilterArrya);
