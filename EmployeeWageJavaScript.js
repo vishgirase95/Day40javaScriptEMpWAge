@@ -39,12 +39,22 @@ function calcDailyWage(Emp_TodayWorkingHR) {
     return Emp_TodayWorkingHR * WagePerHr;
 }
 
-let Monthdays = 0
+let Monthdays = 0;
 while (Monthdays < TotalWorkDays && TotalHrs < 160) {
     Emp_AttenDance = Math.floor(Math.random() * 3);
     Emp_TodayWorkingHR = Employe_DailyWage(Emp_AttenDance);
     DailyWAgesArray.push(calcDailyWage(Emp_TodayWorkingHR));
     TotalHrs += Emp_TodayWorkingHR;
+let EmpDailyHrandWageArr=new Array();
+EmpDailyHrandWageArr.push(
+ {dayNum:Monthdays,
+ DailyHr:Emp_TodayWorkingHR,
+ Dailywage:calcDailyWage(Emp_TodayWorkingHR),
+ toString(){
+     return "\nDay "+this.dayNum+" Working Hr"+this.DailyHr+"Daily earned wage"+dailywage
+ },
+});
+console.log("UC10 showing Daily hour worked and  Earnd "+ EmpDailyHrandWageArr);
 
 
     Monthdays++;
