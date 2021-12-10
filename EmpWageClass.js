@@ -5,6 +5,8 @@ class Employee{
         this.id=params[0];
         this.name=params[1];
         this.salary=params[2];
+        this.gender=params[3];
+        this.date=params[4];
     }
  get name(){return this._name;}
  set name(name){
@@ -15,10 +17,10 @@ else throw 'The name is incorrect';
 
  }
     string(){
-        return "ID : "+this.id+"\nName : "+this.name+"\nSalary : "+ this.salary
+        return "ID : "+this.id+"\nName : "+this.name+"\nSalary : "+ this.salary+"\nGender : "+this.gender+"\nDate : "+this.date
     }
 }
-obj=new Employee(1,"Vish",200);
+obj=new Employee(1,"Vishal",200,20000,"20 dec");
 
 console.log(obj.string());
 
@@ -26,7 +28,7 @@ console.log(obj.string());
  
 
 try {
-  obj.name="Raj";
+  obj.name="Rajesh";
 console.log(obj.string());  
 
 } catch (e) {
