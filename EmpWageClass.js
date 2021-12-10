@@ -48,7 +48,7 @@ try {
 }
 
 try {
-    obj.pincode=1455;
+    obj.pincode=225555;
     console.log(obj.string());
 } catch (e) {
     console.error(e);
